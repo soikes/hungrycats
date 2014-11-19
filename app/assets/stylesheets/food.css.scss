@@ -1,0 +1,134 @@
+// Place all the styles related to the food controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+$font-stack: Helvetica, sans-serif;
+$primary-colour: #FFFFFF; //white
+$button-colour: #B53D25; //mustard
+$container-colour: #7EAA8F; //green
+$background-colour: #332A2D; //dark
+$heart-colour: #E98D78; //pink
+$yellow-colour: #E6CB86; //yellow
+$font: 'Montserrat';
+$total_food: 100%;
+
+body {
+  background: $background-colour;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.h1 {
+  color: $primary-colour;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10em;
+}
+
+#feed_button {
+  color: $primary-colour;
+  background-color: $button-colour;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+  margin: auto;
+  width: 30%;
+  height: 5em;
+  line-height: 5em;
+  box-shadow: 5px 5px 5px #000000;
+  text-align: center;
+  margin-top: 3em;
+}
+
+#feeding_loader {
+  display: block;
+}
+
+.container {
+  color: $primary-colour;
+  background-color: $container-colour;
+  margin: auto;
+  width: 60%;
+  height: 10em;
+  line-height: 10em;
+  box-shadow: 5px 5px 5px #000000;
+  text-align: center;
+}
+
+#heart {
+  position: relative;
+  width: 4em;
+  height: 2.1em;
+  margin: auto;
+  -webkit-animation:spin 2s linear infinite;
+  -moz-animation:spin 2s linear infinite;
+  animation:spin 2s linear infinite;
+}
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 30px;
+  top: 0;
+  width: 30px;
+  height: 47px;
+  background: $heart-colour;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+     -moz-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+       -o-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+#heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+     -moz-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+       -o-transform-origin: 100% 100%;
+          transform-origin :100% 100%;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+#remaining {
+  position: relative;
+  width: 20em;
+  height: 3em;
+  box-shadow: 5px 5px 5px #000000;
+  margin: auto;
+  background-color: $yellow-colour;
+}
+#remaining:before {
+  position: absolute;
+  content: "";
+  width: 20em;
+  height: 3em;
+  left: 0;
+  background-color: $container-colour;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation:growright 2s;
+}
+
+@-webkit-keyframes growright {
+    0%   {width: 0}
+    100%  {width: 100%;}
+}
