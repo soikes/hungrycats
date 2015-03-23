@@ -1,0 +1,41 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Dosis);
+
+// Home
+
+.title-container {
+  text-align: center;
+}
+
+.title {
+  width: 40em;
+  height: 7.5em;
+  margin-right: 2em;
+}
+
+.logoblack {
+  width: 14em;
+  height: 10em;
+  display: none;
+}
+
+.logowhite {
+  width: 14em;
+  height: 10em;
+}
+
+.titlebar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+
+.login-container {
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  color: white;
+}

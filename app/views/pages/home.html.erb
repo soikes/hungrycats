@@ -1,0 +1,22 @@
+<div class='title-container'>
+  <div class='titlebar'>
+    <%= image_tag "hungrycats.png", :class => 'title' %>
+    <%= image_tag "logowhite.png", :class => 'logowhite' %>
+    <%= image_tag "logoblack.png", :class => 'logoblack' %>
+  </div>
+</div>
+
+
+<div class='login-container'>
+  <div class='login-button'>
+  <%= link_to "login", :method => "get" do %>
+    <h1>login</h1>
+  <% end %>
+  </div>
+  
+  <div class='join-button'>
+    <%= link_to "join", :method => "get" do %>
+      <h1>join</h1>
+    <% end %>
+  </div>
+</div>

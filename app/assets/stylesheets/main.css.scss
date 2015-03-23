@@ -1,0 +1,185 @@
+// Place all the styles related to the food controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+$font-stack: Helvetica, sans-serif;
+$primary-colour: #FFFFFF; //white
+$button-colour: #B53D25; //red
+$container-colour: #7EAA8F; //green
+//$background-colour: #332A2D; //dark // OLD!
+//$background-colour: #3f2e86; //dark purple/blue
+$background-colour: #7A3E48;
+$heart-colour: #E98D78; //pink
+$yellow-colour: #E6CB86; //yellow
+$font: 'Montserrat';
+$total_food: 100%;
+
+body {
+  background: $background-colour;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.h1 {
+  color: $primary-colour;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10em;
+}
+
+.red {
+  background-color: #B53D25;
+}
+
+.green {
+  background-color: #7EAA8F;
+}
+
+.button {
+  color: $primary-colour;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+  margin: auto;
+  width: 30%;
+  height: 5em;
+  line-height: 5em;
+  box-shadow: 5px 5px 5px #000000;
+  text-align: center;
+  margin-top: 3em;
+}
+
+#feeding_loader {
+  display: block;
+  color: $primary-colour;
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  color: $primary-colour;
+  margin: auto;
+  width: 60%;
+  height: 10em;
+  line-height: 10em;
+  box-shadow: 5px 5px 5px #000000;
+  text-align: center;
+}
+
+.error {
+  background-color: $button-colour;
+}
+
+#heart {
+  position: relative;
+  width: 4em;
+  height: 2.1em;
+  margin: auto;
+  -webkit-animation:spin 2s linear infinite;
+  -moz-animation:spin 2s linear infinite;
+  animation:spin 2s linear infinite;
+}
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 30px;
+  top: 0;
+  width: 30px;
+  height: 47px;
+  background: $heart-colour;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+     -moz-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+       -o-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+#heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+     -moz-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+       -o-transform-origin: 100% 100%;
+          transform-origin :100% 100%;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+#remaining_container {
+  color: $primary-colour;
+  margin: auto;
+  text-align: center;
+}
+
+#remaining {
+  position: relative;
+  width: 20em;
+  height: 3em;
+  background-color: #333333;
+  box-shadow: 5px 5px 5px #000000;
+  margin: auto;
+}
+
+.inner {
+  float: left;
+  height: 3em;
+  width: 100%;
+  background-color: $container-colour;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation:growright 2s;
+}
+
+@-webkit-keyframes growright {
+    0%   {width: 0}
+    100%  {width: 100%;}
+}
+
+.disabled {
+  opacity: 20%;
+}
+
+.inner {
+  display: inline-block;
+}
+
+.lowfood {
+  background-color: $button-colour;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  .button {
+    color: $primary-colour;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    margin: auto;
+    width: 40%;
+    height: 5em;
+    line-height: 5em;
+    box-shadow: 5px 5px 5px #000000;
+    text-align: center;
+    margin-top: 3em;
+  }
+}

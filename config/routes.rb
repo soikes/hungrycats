@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   post 'food/feed'
   post 'food/refill'
 
-  root 'food#index'
+  get 'login' => 'users#login'
+  get 'join' => 'users#new'
+  
+  root 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
