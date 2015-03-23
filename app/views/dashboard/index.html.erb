@@ -1,0 +1,35 @@
+<% flash.each do |key, msg| -%>
+  <div class='done container center <%=key%>'>
+    <h1><%=msg%></h1>
+  </div>
+<% end -%>
+
+<% if empty? %>
+  <%= render 'no_food_label' %>
+<% else %>
+  <%= render 'feed_button' %>
+<% end %>
+
+<% unless full? %>
+  <%= render 'refill_button' %>
+<% end %>
+
+<div id="done_message">
+  <div id='remaining_container'>
+    <h1>Remaining food: <%= @refill.amount %> </h1>
+    <div id="remaining">
+      <div class="anchor" style="width: <%=@refill.amount%>%">
+        <% if @refill.amount < 30 %>
+          <span class="inner lowfood"></span>
+        <% else %>
+          <span class="inner"></span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="feeding_loader">
+  <h1>Feeding cats...</h1>
+  <div id='heart'></div>
+</div>

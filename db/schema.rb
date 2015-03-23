@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141003064801) do
+ActiveRecord::Schema.define(version: 20141017021803) do
 
-  create_table "foods", force: true do |t|
+  create_table "refills", force: true do |t|
     t.integer  "amount"
     t.datetime "created_at"
     t.datetime "updated_at"

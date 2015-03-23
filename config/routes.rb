@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   get 'food/index'
   post 'food/feed'
   post 'food/refill'
