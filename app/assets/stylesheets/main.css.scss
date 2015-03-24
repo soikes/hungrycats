@@ -16,9 +16,20 @@ $yellow-colour: #E6CB86; //yellow
 $font: 'Montserrat';
 $total_food: 100%;
 
+html {
+  height: 100%;
+}
+
 body {
-  background: $background-colour;
-  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  //background: #3D0028;
+  background: #7A3E48;
+  background-image: 
+  -webkit-radial-gradient(10% 100%, 70em 50em, #22112A, transparent),
+  //  -webkit-radial-gradient(20% 80%, 40em 40em, #BF7667, transparent);
+  -webkit-radial-gradient(90% 10%, circle, #33092C, transparent);
 }
 
 a {
