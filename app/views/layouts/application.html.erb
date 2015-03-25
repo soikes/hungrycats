@@ -4,12 +4,13 @@
   <title>Hungrycats</title>
   <%= favicon_link_tag %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
+  <!--TODO: make this next line work -->
+  <%#= stylesheet_link_tag    params[:controller] %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <%= yield %>
+  <%= debug(params) if Rails.env.development? %>
 </body>
 </html>

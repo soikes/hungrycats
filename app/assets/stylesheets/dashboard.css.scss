@@ -1,3 +1,14 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// TODO: remove require_tree . from application.css so that we can have styles per-page
+h2 {
+  color: white;
+  margin-left: 1em;
+}
+
+h3 {
+  color: white;
+}

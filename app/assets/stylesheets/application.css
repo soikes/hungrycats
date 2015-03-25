@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ * TODO: REMOVE require_tree . so we can have per-page css
  *= require_self
  *= require normalize-rails
  *= require_tree .

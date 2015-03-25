@@ -21,6 +21,7 @@ html {
 }
 
 body {
+  height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -30,6 +31,14 @@ body {
   -webkit-radial-gradient(10% 100%, 70em 50em, #22112A, transparent),
   //  -webkit-radial-gradient(20% 80%, 40em 40em, #BF7667, transparent);
   -webkit-radial-gradient(90% 10%, circle, #33092C, transparent);
+  
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.debug_dump {
+  color: white;
 }
 
 a {
@@ -37,10 +46,9 @@ a {
   text-decoration: inherit; /* no underline */
 }
 
-.h1 {
-  color: $primary-colour;
+h1 {
   font-family: 'Montserrat', sans-serif;
-  padding: 10em;
+  font-size: 48px;
 }
 
 .red {
@@ -73,13 +81,16 @@ a {
 }
 
 .container {
-  color: $primary-colour;
-  margin: auto;
-  width: 60%;
-  height: 10em;
-  line-height: 10em;
-  box-shadow: 5px 5px 5px #000000;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 100%;
+}
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-30%);
 }
 
 .error {

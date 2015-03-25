@@ -39,6 +39,8 @@ gem 'normalize-rails'
 gem 'd3js-rails'
 gem 'jquery-ui-rails'
 
+gem 'bcrypt'
+
 gem 'sqlite3', :group => [:development, :test]
 
 group :production do
