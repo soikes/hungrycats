@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   root 'pages#home'
   
-  get 'login' => 'users#login'
-  get 'join' => 'users#new'
+  get  '/login' => 'users#login'
   
-  get 'dashboard' => 'dashboard#index'
+  get '/join' => 'users#new', as: 'join'
+  post '/join' => 'users#create'
+  
+  get '/dashboard' => 'dashboard#index'
   
   resources :users
 

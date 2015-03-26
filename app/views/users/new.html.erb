@@ -3,15 +3,17 @@
 <div class='container vertical-align'>
   <h1>Join</h1>
   
-  <%= form_for(@user) do |f| %>
-    <%= f.text_field :name, :placeholder => 'name' %>
+  <%= form_tag '/join' do %>
+    <%= render 'shared/error_messages' %>
+    
+    <%= text_field_tag "user[name]", nil, :placeholder => 'name' %>
 
-    <%= f.email_field :email, :placeholder => 'email' %>
+    <%= email_field_tag "user[email]", nil, :placeholder => 'email' %>
 
-    <%= f.password_field :password, :placeholder => 'password' %>
+    <%= password_field_tag "user[password]", nil, :placeholder => 'password' %>
 
-    <%= f.password_field :password_confirmation, :placeholder => 'confirm password' %>
+    <%= password_field_tag "user[password_confirmation]", nil, :placeholder => 'confirm password' %>
 
-    <%= f.submit "join hungrycats" %>
+    <%= submit_tag "join hungrycats" %>
   <% end %>
 </div>

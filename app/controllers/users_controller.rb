@@ -4,15 +4,22 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.new(params[:user])
+    @user = User.new(user_params)
     if @user.save
-      #success
+      flash[:success] = "welcome to hungrycats."
+      redirect_to '/dashboard'
     else
-      render 'join'
+      render :new
     end
   end
   
   def login
+    
+  end
   
+  private
+  
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
