@@ -1,19 +1,22 @@
 <% provide(:title, 'Join') %>
+<div class='row'>
+  <div class='col-xs-12'>
+    <div class='login-container'>
+      <h1>Join</h1>
+      
+      <%= form_tag '/join' do %>
+        <%= render 'shared/error_messages' %>
+        
+        <%= text_field_tag "user[name]", nil, :placeholder => 'name' %>
 
-<div class='container vertical-align'>
-  <h1>Join</h1>
-  
-  <%= form_tag '/join' do %>
-    <%= render 'shared/error_messages' %>
-    
-    <%= text_field_tag "user[name]", nil, :placeholder => 'name' %>
+        <%= email_field_tag "user[email]", nil, :placeholder => 'email' %>
 
-    <%= email_field_tag "user[email]", nil, :placeholder => 'email' %>
+        <%= password_field_tag "user[password]", nil, :placeholder => 'password' %>
 
-    <%= password_field_tag "user[password]", nil, :placeholder => 'password' %>
+        <%= password_field_tag "user[password_confirmation]", nil, :placeholder => 'confirm password' %>
 
-    <%= password_field_tag "user[password_confirmation]", nil, :placeholder => 'confirm password' %>
-
-    <%= submit_tag "join hungrycats" %>
-  <% end %>
+        <%= submit_tag "join hungrycats" %>
+      <% end %>
+    </div>
+  </div>
 </div>

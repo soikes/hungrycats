@@ -41,6 +41,9 @@ gem 'jquery-ui-rails'
 
 gem 'bcrypt'
 
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+
 gem 'sqlite3', :group => [:development, :test]
 
 group :production do

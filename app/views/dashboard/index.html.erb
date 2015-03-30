@@ -1,10 +1,48 @@
-<% flash.each do |message_type, message| %>
-  <div class="alert alert-<%= message_type %>"><%= message %></div>
-<% end %>
+<h2>dashboard</h1>
 
-<h2>hungrycats dashboard</h1>
+<div class='row'>
+  <div class="col-xs-6">
+    <%= render "food/remaining" %>
+  </div>
   
-<div class='container'>
-      
-  <h3>no full cats allowed</h3>
+  <div class="col-xs-6">
+    <div class='widget'>
+      <span class='widget_title'>meal history for device 'penny_feeder'</span>
+      <div class='row'>
+        mar 25, 5:30 am: 100g
+      </div>
+      <div class='row'>
+        mar 25, 2:00 pm: 175g
+      </div>
+      <div class='row'>
+        mar 25, 10:30pm: 100g
+      </div>
+    </div>
+  </div>  
 </div>
+
+<div class='row'>
+  <div class="col-xs-6">
+    <div class='widget'>
+      <span class='widget_title'>meal history for device 'scout_feeder'</span>
+      <div class='row'>
+        mar 25, 5:30 am: 75g
+      </div>
+      <div class='row'>
+        mar 25, 2:00 pm: 200g
+      </div>
+      <div class='row'>
+        mar 25, 10:30pm: 75g
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-xs-6">
+    <div class='widget'>
+      <span class='widget_title'>deals on cat food</span>
+      <div class='row'>
+        cat house: 10% off bag until April 15, 2015
+      </div>
+    </div>
+  </div>
+</div> 

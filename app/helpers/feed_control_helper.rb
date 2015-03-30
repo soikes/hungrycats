@@ -1,0 +1,2 @@
+module FeedControlHelper
+end

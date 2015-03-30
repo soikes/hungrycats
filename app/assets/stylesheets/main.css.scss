@@ -22,33 +22,70 @@ html {
 }
 
 body {
+  height: 100%;
   position:absolute; top:0; bottom:0; right:0; left:0;
   margin: 0;
+  
   background-repeat: no-repeat;
   background-attachment: fixed;
-  //background: #3D0028;
   background: #7A3E48;
   background-image: 
   -webkit-radial-gradient(10% 100%, 70em 50em, #22112A, transparent),
-  //  -webkit-radial-gradient(20% 80%, 40em 40em, #BF7667, transparent);
   -webkit-radial-gradient(90% 10%, circle, #33092C, transparent);
-  
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-}
-
-.debug_dump {
+  
+  font-family: 'Montserrat', sans-serif;
   color: white;
 }
 
-a {
+.widget {
+  background-color: #291E2E;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #000000;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.widget .row {
+  margin: 15px;
+}
+
+.widget_title {
+  font-size: 22px;
+}
+
+.main-row {
+  height: 100%;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+#main-container {
+  height: 100%;
+}
+
+#navbar-container {
+  background-color: #291E2E;
+  height: 100%;
+  color: white;
+  padding: 0;
+}
+
+.debug_dump {
+  color: black;
+}
+
+a, a:hover {
   color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
+  text-decoration: none; /* no underline */
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
   font-size: 48px;
 }
 
@@ -81,11 +118,11 @@ h1 {
   text-align: center;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-}
+// .container {
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 70%;
+// }
 
 .vertical-align {
   position: relative;
@@ -146,45 +183,22 @@ h1 {
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-#remaining_container {
-  color: $primary-colour;
-  margin: auto;
+.alert {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: black;
+  color: white;
+  opacity: 70%;
+  border-radius: 20px;
   text-align: center;
-}
-
-#remaining {
-  position: relative;
-  width: 20em;
-  height: 3em;
-  background-color: #333333;
-  box-shadow: 5px 5px 5px #000000;
-  margin: auto;
-}
-
-.inner {
-  float: left;
-  height: 3em;
-  width: 100%;
-  background-color: $container-colour;
-  -webkit-animation-timing-function: ease-out;
-  -webkit-animation:growright 2s;
-}
-
-@-webkit-keyframes growright {
-    0%   {width: 0}
-    100%  {width: 100%;}
-}
-
-.disabled {
-  opacity: 20%;
-}
-
-.inner {
-  display: inline-block;
-}
-
-.lowfood {
-  background-color: $button-colour;
+  font-size: 18px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 /* Smartphones (portrait and landscape) ----------- */

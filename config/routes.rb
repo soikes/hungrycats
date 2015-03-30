@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
+  
   root 'pages#home'
   
-  get  '/login' => 'users#login'
-  
+  get  '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
+
   get '/join' => 'users#new', as: 'join'
   post '/join' => 'users#create'
   
   get '/dashboard' => 'dashboard#index'
+  get '/control' => 'feed_control#index'
+  get '/schedules' => 'schedules#index'
+  get '/live' => 'live_feed#index'
   
   resources :users
 

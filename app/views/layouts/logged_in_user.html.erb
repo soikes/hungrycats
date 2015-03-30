@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hungrycats</title>
+    <%= favicon_link_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="main-container" class="container-fluid">
+      <div class="main-row">
+        <div id='navbar-container' class="col-xs-2">
+          <%= render 'layouts/navbar' %>
+        </div>
+        <div class="col-xs-10">
+          <%= yield %>
+          <%= debug(params) if Rails.env.development? %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
