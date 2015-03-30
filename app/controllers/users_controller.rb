@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "welcome to hungrycats."
+      log_in(@user)
       redirect_to '/dashboard'
     else
       render :new
