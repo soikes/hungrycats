@@ -98,17 +98,11 @@ h1 {
 }
 
 .button {
-  color: $primary-colour;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  border-radius: 40px;
-  margin: auto;
+  font-size: 28px;
+  background-color: #291E2E;
   width: 30%;
-  height: 5em;
-  line-height: 5em;
   box-shadow: 5px 5px 5px #000000;
   text-align: center;
-  margin-top: 3em;
 }
 
 #feeding_loader {

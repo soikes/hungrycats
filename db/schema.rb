@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412082524) do
+ActiveRecord::Schema.define(version: 20150412093527) do
 
   create_table "accounts", force: true do |t|
     t.datetime "created_at"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150412082524) do
     t.integer  "account_id"
     t.integer  "remaining_food"
     t.string   "ip"
+    t.string   "name"
   end
 
   create_table "refills", force: true do |t|

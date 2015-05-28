@@ -14,8 +14,17 @@ Rails.application.routes.draw do
   get '/schedules' => 'schedules#index'
   get '/live' => 'live_feed#index'
   
+  post '/feed/:amount' => 'food#feed'
+  
   resources :users
 
+  # hungryagent api
+  namespace :api do
+    namespace :v1 do
+      resources :agents
+    end
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

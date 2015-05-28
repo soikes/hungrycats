@@ -3,5 +3,10 @@
 <div class='row'>  
   <div class="col-xs-12">
     <h3>change feeding parameters here</h3>
+    <div id='feed_button' class='button red'>
+      <%= link_to "/feed/3", :method => "post", remote: true do %>
+        FEED THE CATS
+      <% end %>
+    </div>
   </div>
 </div>

@@ -7,11 +7,15 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(user_params)
+    @account = Account.create
+    @user.account_id = @account.id
+    
     if @user.save
       flash[:success] = "welcome to hungrycats."
       log_in(@user)
       redirect_to '/dashboard'
     else
+      @account.delete
       render :new
     end
   end
