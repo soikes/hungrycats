@@ -1,5 +1,7 @@
 class ApiController < ApplicationController
 
-def agent
+  def agent
+
+  end
 
 end
