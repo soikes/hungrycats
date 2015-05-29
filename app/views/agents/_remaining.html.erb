@@ -1,7 +1,7 @@
 <div class='row'>
-  remaining food on agent <%=agent_name%> (<%=ip%>):
+  remaining food on agent <%= agent.name %> (<%=agent.ip%>):
   <div id="remaining">
-    <div class="anchor" style="width: <%= remaining_food %>%">
+    <div class="anchor" style="width: <%= agent.remaining_food %>%">
       <% if 100 < 30 %>
         <span class="inner lowfood"></span>
       <% else %>
